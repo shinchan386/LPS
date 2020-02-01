@@ -1,0 +1,7 @@
+<h3><%= tweet.title %></h3>
+<h5><%= tweet.comment %></h5>
+<% if user_signed_in? %>
+<% if current_user.id = tweet.user_id %>
+<%=  link_to "delete",tweets_id_path,method: :delete %>
+<% end %>
+<% end %>
