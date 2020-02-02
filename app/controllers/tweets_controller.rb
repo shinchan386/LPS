@@ -18,6 +18,10 @@ class TweetsController < ApplicationController
       tweet.update(tweet_params)
   end
   
+  def show
+      @tweet = Tweet.find(params[:id])
+  end
+  
   
   def create
     Tweet.create(title: tweet_params[:title],comment: tweet_params[:comment],user_id: current_user.id )

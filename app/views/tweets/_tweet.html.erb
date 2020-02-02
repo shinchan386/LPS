@@ -4,5 +4,6 @@
 <% if current_user.id = tweet.user_id %>
 <%= link_to "edit", "/tweets/#{tweet.id}/edit"%>
 <%=  link_to "delete","/tweets/#{tweet.id}",method: :delete %>
+<%= link_to "show", "/tweets/#{tweet.id}"%>
 <% end %>
 <% end %>
