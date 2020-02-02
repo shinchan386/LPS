@@ -1,0 +1,8 @@
+  <%= form_tag("/tweets/#{@tweet.id}", method: :patch ) do %>
+    <h3>
+      編集する
+    </h3>
+    <textarea name="title" placeholder="text" rows="10" cols="10"><%= @tweet.title %></textarea>
+    <textarea name="comment" placeholder="text" rows="10" cols="30"><%= @tweet.comment %></textarea>
+    <input type="submit" value="SENT">
+  <% end %>    

@@ -2,6 +2,7 @@
 <h5><%= tweet.comment %></h5>
 <% if user_signed_in? %>
 <% if current_user.id = tweet.user_id %>
-<%=  link_to "delete",tweets_id_path,method: :delete %>
+<%= link_to "edit", "/tweets/#{tweet.id}/edit"%>
+<%=  link_to "delete","/tweets/#{tweet.id}",method: :delete %>
 <% end %>
 <% end %>

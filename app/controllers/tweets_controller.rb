@@ -6,9 +6,18 @@ class TweetsController < ApplicationController
     @tweets = Tweet.all
   end
 
+  def edit
+    @tweet = Tweet.find(params[:id])
+  end
+
   def new
   end
 
+  def update 
+      tweet = Tweet.find(params[:id])
+      tweet.update(tweet_params)
+  end
+  
   
   def create
     Tweet.create(title: tweet_params[:title],comment: tweet_params[:comment],user_id: current_user.id )
@@ -18,7 +27,7 @@ class TweetsController < ApplicationController
   end
   
   def destroy
-    tweet = Tweet.find(params[:id])
+    @tweet = Tweet.find(params[:id])
   end
   
   private
