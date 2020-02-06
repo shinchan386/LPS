@@ -19,7 +19,7 @@ class TweetsController < ApplicationController
   end
   
   def show
-      @tweet = Tweet.find(params[:id])
+    @tweet = Tweet.find(params[:id])
   end
   
   
@@ -27,9 +27,6 @@ class TweetsController < ApplicationController
     Tweet.create(title: tweet_params[:title],comment: tweet_params[:comment],user_id: current_user.id )
   end
 
-  def show
-  end
-  
   def destroy
     @tweet = Tweet.find(params[:id])
   end
