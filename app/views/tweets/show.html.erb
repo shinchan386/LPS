@@ -1,5 +1,6 @@
 <h3><%= @tweet.title %></h3>
 <h5><%= @tweet.comment %></h5>
+<%= link_to "コメントする" , new_comment_path %>
 <% @comments.each do |comment| %>
 <%= render partial: "commnet" , locals: { comment: comment }%>
 <% end %>
