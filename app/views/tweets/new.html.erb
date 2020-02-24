@@ -1,8 +1,6 @@
-<div>
-  <%=  form_tag('/tweets', method:  :post) do %>
-    <h3>ToDo</h3>
-  <input type="text" name="title" placeholeder="Todo" >
-  <input type="text" name="comment" placeholder="コメント">
-  <input type="submit" value="SEND">
-  <% end %>
-</div>  
+<%= form_for @tweet ,url:"/tweets" do |f| %>
+<%= f.text_field :title %>
+<%= f.text_field :comment %>
+<%= f.file_field :image %>
+<%= f.submit %>
+<% end %>

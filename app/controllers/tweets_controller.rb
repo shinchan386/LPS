@@ -11,6 +11,7 @@ class TweetsController < ApplicationController
   end
 
   def new
+    @tweet = Tweet.new
   end
 
   def update 
@@ -20,11 +21,12 @@ class TweetsController < ApplicationController
   
   def show
     @tweet = Tweet.find(params[:id])
+    @comments = Comment.where(tweet_id: params[:id])
   end
   
   
   def create
-    Tweet.create(title: tweet_params[:title],comment: tweet_params[:comment],user_id: current_user.id )
+    Tweet.create(tweet_params)
   end
 
   def destroy
@@ -33,7 +35,7 @@ class TweetsController < ApplicationController
   
   private
   def tweet_params
-    params.permit(:title,:comment)
+    params.require(:tweet).permit(:title,:comment,:image).merge(user_id: current_user.id)
   end
   
   def move_to_index

@@ -1,6 +1,15 @@
+<div>
 <h3><%= @tweet.title %></h3>
 <h5><%= @tweet.comment %></h5>
-<%= link_to "コメントする" , new_comment_path %>
+<div ><%= image_tag(rails_blob_path(@tweet.image),:class => "user_img")%></div>
+</div>
+<% if user_signed_in? %>
+<% if @tweet.user_id == current_user.id %>
+<%= link_to "delete","/tweets/#{@tweet.id}",method: :delete %>
+<%= link_to "edit", "/tweets/#{@tweet.id}/edit"%>
+<% end %>
+<% end %>
+<%= link_to "コメントする","/tweets/#{@tweet.id}/comments/new" %>
 <% @comments.each do |comment| %>
-<%= render partial: "commnet" , locals: { comment: comment }%>
+<%= render partial: "comments/comment", locals: { comment: comment }%>
 <% end %>

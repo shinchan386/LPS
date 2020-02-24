@@ -1,0 +1,171 @@
+html {
+    font-family: "yuGothic", sans-serif;
+    box-sizing: border-box;
+}
+
+.all-content{
+  min-width: 880px;
+}
+
+html a{
+    text-decoration: none;
+}
+
+ul{
+  list-style: none; 
+}
+
+.header{
+    position: fixed;
+}
+
+.header_bar{
+  height: 60px;
+  width: 100vw;
+  background-color: #0072BB;
+  padding-left: 20px;
+  font-family: "Seymour One", sans-serif;
+  font-size: 20px;
+  color: #F9CB40;
+  line-height: 60px;
+  letter-spacing: 1px;
+}
+
+.header_bar a {
+  text-decoration: none;
+}
+
+
+.menu {
+  height: 50px;
+  width: 100vw;
+  background-color: #87ceeb;
+  font-family: "Seymour One", sans-serif;
+  font-size: 20px;
+  color: #F9CB40;
+  line-height: 50px;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.menu ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu span{
+    padding-right: 20px;
+}
+
+#nil{
+    height: 110px;
+}
+
+#nil2{
+    height: calc(100vh - 160px);
+}
+
+.main-contents {
+    padding: 0px 0px 10px 0px;
+    background-color: #b0e0e6;
+    overflow: scroll;
+    position: fixed;
+    height: calc(100vh - 160px);
+}
+
+.footer {
+    height: 50px;
+    background-color:#0072BB;
+    color: #F9CB40;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    letter-spacing: 0.1em;
+}
+
+.user_img{
+    height: 250px;
+    padding: 10px;
+}
+
+.content_diary{
+  width: 400px;
+  color: #666;
+}
+
+.content{
+    display: flex;
+    margin: 40px 40px 10px 80px;
+    background-color: #eee;
+    padding: 0px 10px 0px 0px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+  margin: 10px 10px 30px 330px;
+}
+
+.tweet_title {
+  margin: 10px 0px 0px 0px;
+}
+
+.tweet_title h3 {
+  color: #6cb4e4;
+  text-align: center;
+  padding: 0.25em;
+  border-top: solid 2px #6cb4e4;
+  border-bottom: solid 2px #6cb4e4;
+  background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+  background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+}
+
+.tweet_comment{
+  padding: 10px;
+  height: 150px;
+  overflow: scroll;
+  margin: 10px 0;
+  color: #00BCD4;
+  background: #e4fcff;/*背景色*/
+  border-top: solid 6px #1dc1d6;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
+}
+
+.plan_menu{
+  margin: 30px;
+}
+
+.image_menu_frame{
+  padding: 5px;
+  height: 200px;
+  width: 300px;
+  overflow: hidden;
+}
+
+.image_menu{
+  padding: 5px;
+  height: 300px;
+}
+
+.text_plan{
+   padding: 10px;
+  height: 50px;
+  overflow: scroll;
+  margin: 10px 0px 0px 10px;
+  color: #00BCD4;
+  background: #e4fcff;/*背景色*/
+  border-top: solid 6px #1dc1d6;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
+}
+
+.box{
+  display: flex;
+  justify-content: space-around;
+  margin: 80px;
+}

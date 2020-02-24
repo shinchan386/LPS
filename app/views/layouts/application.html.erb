@@ -4,14 +4,49 @@
     <title>LPS</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="app/assets/stylesheets/style.sccs" type="text.css">
+    <link href="https://fonts.googleapis.com/css?family=Seymour+One" rel="stylesheet">
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
   <%= render partial: "common/header" %>
-    
-    <%= yield %>
+  
+    <div class="header">
+      <div class="header_bar">
+          <ul>
+            <li><h3><a href="/">ToDoリスト</a></h3></li>
+          </ul>
+      </div>
+      <div class=menu>
+        <ul>
+          <% if user_signed_in? %>
+            <span>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            <a class="post" href="/images">投稿する</a></li> 
+            <!--#images/index.html.erbへ飛ぶ-->
+            </span>  
+            <% elsif %>
+            <span>
+            <li><%= link_to "ログイン", new_user_session_path, method: :get %>
+            <%= link_to "新規登録", new_user_registration_path,method: :get %></li>
+            </span>
+            <% end %>
+        </ul>
+      </div>
+    </div>
+    <div id=nil></div>
+      <div class=all-contents>
+        <%= yield %>
+      </div>  
+       <div class=sub-contents>
+      </div> 
+    <div id=nil2></div>
+      <div class=footer>
+         初作成　@20200222  All Rights Reserved.
+      </div>  
   </body>
 </html>

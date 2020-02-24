@@ -1,9 +1,12 @@
-<h3><%= tweet.title %></h3>
-<h5><%= tweet.comment %></h5>
-<% if user_signed_in? %>
-<% if current_user.id = tweet.user_id %>
-<%= link_to "edit", "/tweets/#{tweet.id}/edit"%>
-<%=  link_to "delete","/tweets/#{tweet.id}",method: :delete %>
-<%= link_to "show", "/tweets/#{tweet.id}"%>
-<% end %>
-<% end %>
+<div class=content>
+      <div class=content_image ><%= image_tag(rails_blob_path(tweet.image),:class => "user_img")%></div>
+      <div class=content_diary>
+        <div class=tweet_title><h3><%= tweet.title %></h3></div>
+        <div class=tweet_comment><p><%= tweet.comment %></p></div>
+          <% if user_signed_in? %>
+          <% if current_user.id == tweet.user_id %>
+              <div class=btn><%= link_to "show", "/tweets/#{tweet.id}"%></div>
+          <% end %>
+          <% end %>
+      </div>    
+</div>

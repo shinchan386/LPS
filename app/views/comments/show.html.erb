@@ -1,0 +1,6 @@
+<%= @tweet.comment %>
+<%= @comment.comment %>
+<%= form_for @comment ,url:"/tweets/#{@tweet.id}/comments/#{@comment.id}" do |f| %>
+<%= f.text_field :comment %>
+<%= f.submit %>
+<% end %>

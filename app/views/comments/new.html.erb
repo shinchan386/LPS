@@ -1,4 +1,4 @@
-<%= form_tag ('/comments', method: :post) do %>
-<textarea name="commnet" rows="30" cols="30"></textarea>
+<%= form_tag("/tweets/#{params[:tweet_id]}/comments", method: :post) do %>
+<textarea name="comment" rows="30" cols="30"></textarea>
 <input type="submit" value="SEND">
 <% end %>
