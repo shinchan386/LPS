@@ -3,8 +3,14 @@ html {
     box-sizing: border-box;
 }
 
-.all-content{
+.all-contents{
   min-width: 880px;
+  padding: 0px 0px 10px 0px;
+  background-color: #b0e0e6;
+  overflow: scroll;
+  position: fixed;
+  height: calc(100vh - 160px);
+  width: 100vw;
 }
 
 html a{
@@ -138,7 +144,8 @@ ul{
 }
 
 .plan_menu{
-  margin: 30px;
+  margin: 15px 5px 5px 5px;
+  height: 280px;
 }
 
 .image_menu_frame{
@@ -167,5 +174,4 @@ ul{
 .box{
   display: flex;
   justify-content: space-around;
-  margin: 80px;
 }
