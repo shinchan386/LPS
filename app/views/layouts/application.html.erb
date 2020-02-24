@@ -22,11 +22,13 @@
           </ul>
       </div>
       <div class=menu>
+        <div class=menu1>
         <ul>
           <% if user_signed_in? %>
             <span>
-            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-            <a class="post" href="/images">投稿する</a></li> 
+            <li><a class="post" href="/images">投稿する</a>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete,class:"post" %>
+            </li> 
             <!--#images/index.html.erbへ飛ぶ-->
             </span>  
             <% elsif %>
@@ -36,6 +38,7 @@
             </span>
             <% end %>
         </ul>
+        </div>
       </div>
     </div>
     <div id=nil></div>
@@ -46,7 +49,7 @@
       </div> 
     <div id=nil2></div>
       <div class=footer>
-         初作成　@20200222  All Rights Reserved.
+         初作成　@20200222  無断複写・転載を禁じます。
       </div>  
   </body>
 </html>

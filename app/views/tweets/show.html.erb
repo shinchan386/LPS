@@ -1,15 +1,21 @@
-<div>
-<h3><%= @tweet.title %></h3>
-<h5><%= @tweet.comment %></h5>
-<div ><%= image_tag(rails_blob_path(@tweet.image),:class => "user_img")%></div>
+<div class=content_del>
+  <div class=content_show>
+    <div class=tweet_title><h3><%= @tweet.title %></h3></div>
+    <div class=tweet_comment><h5><%= @tweet.comment %></h5></div>
+    <div class=content_image><%= image_tag(rails_blob_path(@tweet.image),:class => "user_img")%></div>
+      <div class=btns>
+      <% if user_signed_in? %>
+      <% if @tweet.user_id == current_user.id %>
+      <div class=nomal_btn><%= link_to "delete","/tweets/#{@tweet.id}",method: :delete %></div>
+      <div class=nomal_btn><%= link_to "edit", "/tweets/#{@tweet.id}/edit"%></div>
+      <% end %>
+      <% end %>
+      </div>
+  </div>
+<div class=comment_show>
+      <div class=btn><%= link_to "コメントする","/tweets/#{@tweet.id}/comments/new" %></div>
+          <% @comments.each do |comment| %>
+          <%= render partial: "comments/comment", locals: { comment: comment }%>
+          <% end %>
 </div>
-<% if user_signed_in? %>
-<% if @tweet.user_id == current_user.id %>
-<%= link_to "delete","/tweets/#{@tweet.id}",method: :delete %>
-<%= link_to "edit", "/tweets/#{@tweet.id}/edit"%>
-<% end %>
-<% end %>
-<%= link_to "コメントする","/tweets/#{@tweet.id}/comments/new" %>
-<% @comments.each do |comment| %>
-<%= render partial: "comments/comment", locals: { comment: comment }%>
-<% end %>
+</div>

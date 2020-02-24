@@ -54,6 +54,7 @@ ul{
   text-decoration: none;
 }
 
+
 .menu ul{
     display: flex;
     justify-content: flex-end;
@@ -79,6 +80,17 @@ ul{
     height: calc(100vh - 160px);
 }
 
+#read {
+    height: 50px;
+    color: #F9CB40;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 50px;
+    letter-spacing: 0.1em;
+    margin: 0px 0px 0px 80px;
+  
+}
+
 .footer {
     height: 50px;
     background-color:#0072BB;
@@ -100,9 +112,15 @@ ul{
   color: #666;
 }
 
+.content_image{
+  height: 250px;
+  width: 350px;
+  overflow: hidden;
+}
+
 .content{
     display: flex;
-    margin: 40px 40px 10px 80px;
+    margin: 10px 40px 40px 80px;
     background-color: #eee;
     padding: 0px 10px 0px 0px;
 }
@@ -115,9 +133,19 @@ ul{
   color: #FFF;
   border-bottom: solid 4px #627295;
   border-radius: 3px;
-  margin: 10px 10px 30px 330px;
+  margin: 10px 10px 10px 330px;
 }
 
+.nomal_btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #668ad8;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+  margin: 10px 10px 10px 10px;
+}
 .tweet_title {
   margin: 10px 0px 0px 0px;
 }
@@ -174,4 +202,58 @@ ul{
 .box{
   display: flex;
   justify-content: space-around;
+}
+
+.first_form {
+	position: relative;
+	width: 80%;
+	margin: 15px 3%;
+}
+.first_form input[type='text'] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 50%;
+	padding: 0.3em;
+	transition: 0.3s;
+	letter-spacing: 1px;
+	color: #aaaaaa;
+	border: none;
+	border-bottom: 2px solid #1b2538;
+	background: transparent;
+}
+
+.form h4{
+  margin: 5px 0px 0px 30px;
+}
+
+.post{
+  margin: 0px 10px 0px 10px;
+}
+
+.success h3{
+    height: 50px;
+    color: #F9CB40;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 50px;
+    letter-spacing: 0.1em;
+    margin: 0px 0px 0px 80px;
+}
+
+.content_show{
+  height: 400px;
+  width: 500px;
+  margin: 0px 100px;
+}
+
+.content_del{
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+}
+
+.btn{
+  display: flex;
+  margin: 10px;
+  justify-content: center;
 }

@@ -1,6 +1,18 @@
+<div class="form">
 <%= form_for @tweet ,url:"/tweets" do |f| %>
-<%= f.text_field :title %>
-<%= f.text_field :comment %>
+<h4>計画を入力してください</h4>
+<div class="first_form">
+<%= f.text_field :title , placeholder: "入力してください", cols:"30", rows:"10", autofocus:"true", class:"form-control"%>
+</div>
+<h4>目標金額を入力してください</h4>
+<div class="first_form">
+<%= f.text_field :comment , placeholder: "入力してください", cols:"30", rows:"10", autofocus:"true", class:"form-control"%>
+</div>
+<h4>イメージを登録しましょう</h4>
+<div class="first_form">
 <%= f.file_field :image %>
-<%= f.submit %>
+</div>
+<p><%= f.submit "登録する", class:"btn "%></p>
 <% end %>
+</div>
+</div>
